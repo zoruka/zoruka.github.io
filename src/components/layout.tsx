@@ -35,6 +35,12 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const LayoutContainer = styled.div`
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
   width: 648px;
   margin: 0 auto;
 

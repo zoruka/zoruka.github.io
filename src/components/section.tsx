@@ -10,15 +10,6 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  &::before {
-    position: absolute;
-    content: ' ';
-    border-top: 1px dashed var(--light);
-    left: 0;
-    right: 0;
-    top: 0;
-  }
 `;
 
 export default Section;

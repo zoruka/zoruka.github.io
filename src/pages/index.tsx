@@ -3,6 +3,7 @@ import Layout from '../components/layout';
 import ProfileAvatar from '../components/profile-avatar';
 import ProfileData from '../components/profile-data';
 import Section from '../components/section';
+import TalkBalloon from '../components/talk-balloon';
 import { getLevel } from '../utils';
 
 const PROFILE = {
@@ -14,7 +15,7 @@ const PROFILE = {
 const HomePage: React.FC = () => {
   return (
     <Layout>
-      <h1>Hello World!</h1>
+      <TalkBalloon>Hello World!</TalkBalloon>
       <Section>
         <ProfileAvatar />
         {Object.entries(PROFILE).map(([label, data]) => (
