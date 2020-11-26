@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Nunito`],
+        fonts: [`Nunito`, 'Press Start 2P'],
         display: 'swap',
       },
     },
