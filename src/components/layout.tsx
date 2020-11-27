@@ -24,9 +24,9 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
   }
-
-  html, body, #___gatsby, #gatsby-focus-wrapper {
-    min-height: 100%;
+  
+  #___gatsby, #gatsby-focus-wrapper {
+    min-height: 100vh;
   }
 
   #gatsby-focus-wrapper {
