@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
-
+import Footer from './footer';
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -10,7 +10,7 @@ interface LayoutProps {
 const GlobalStyle = createGlobalStyle`
   :root {
     --dark: #323232;
-    --blue: blue;
+    --blue: #006aff;
     --light: #fff;
     --default-shadow: 1px 0 3px 1px #000;
   }
@@ -20,8 +20,20 @@ const GlobalStyle = createGlobalStyle`
     text-shadow: 1px 0 3px #000;
   }
 
+
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
+  }
+
+  html, body, #___gatsby, #gatsby-focus-wrapper {
+    min-height: 100%;
+  }
+
+  #gatsby-focus-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
   }
 
   body {
@@ -35,7 +47,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const LayoutContainer = styled.div`
-  padding-top: 10vh;
+  padding: 10vh 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -62,11 +74,14 @@ const LayoutHelmet: React.FC<{ title?: string }> = ({
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <LayoutContainer>
-      <LayoutHelmet />
-      <GlobalStyle />
-      {children}
-    </LayoutContainer>
+    <>
+      <LayoutContainer>
+        <LayoutHelmet />
+        <GlobalStyle />
+        {children}
+      </LayoutContainer>
+      <Footer />
+    </>
   );
 };
 

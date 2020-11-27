@@ -7,10 +7,13 @@ const DataContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 1.2rem 0.8rem;
+  padding: 1.5rem 0.8rem;
 
   span {
     font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   label {
@@ -18,7 +21,7 @@ const DataContainer = styled.div`
     font-size: 0.6rem;
     left: 0;
     right: 0;
-    bottom: 0.1rem;
+    bottom: 0.5rem;
     text-transform: uppercase;
     color: var(--blue);
   }
@@ -26,7 +29,7 @@ const DataContainer = styled.div`
 
 const ProfileData: React.FC<{
   label: string;
-  children: string;
+  children: React.ReactNode;
 }> = ({ label, children }) => {
   return (
     <DataContainer>

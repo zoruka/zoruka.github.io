@@ -8,7 +8,7 @@ const TalkBalloon = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #000;
+  color: var(--blue);
   width: fit-content;
 
   padding: 30px;
@@ -27,8 +27,7 @@ const TalkBalloon = styled.div`
   &::after {
     content: ' ';
     position: absolute;
-    border: 1px dashed;
-    border-color: var(--dark);
+    border: 1px dashed var(--blue);
     width: calc(100% - 16px);
     height: calc(100% - 16px);
     left: 7px;

@@ -24,8 +24,8 @@ const ProfileAvatar = styled.div`
     top: 7px;
     border-radius: 50%;
 
-    transition: all 500ms ease-out;
-    animation: rotation 30s infinite;
+    transition: border-color 500ms ease-out;
+    animation: rotation 30s 0s infinite linear;
   }
 
   &:hover {
@@ -33,6 +33,7 @@ const ProfileAvatar = styled.div`
 
     &::after {
       border-color: var(--blue);
+      animation: rotation 10s 0s infinite linear;
     }
   }
 
