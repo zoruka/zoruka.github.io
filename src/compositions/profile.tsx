@@ -16,6 +16,13 @@ const Profile = {
   location: 'Santa Rita do Sapucaí, Brazil',
 };
 
+const Links = {
+  github: 'https://github.com/zoruka',
+  instagram: 'https://www.instagram.com/zoruka',
+  linkedIn: 'https://www.linkedin.com/in/felipejmendes/',
+  mail: 'mailto:zo.fmendes@gmail.com',
+};
+
 export const ProfileComposition: React.FC = () => {
   return (
     <Layout theme="dark">
@@ -28,13 +35,10 @@ export const ProfileComposition: React.FC = () => {
         ))}
 
         <ProfileData label="Find Me">
-          <IconLink href="https://github.com/zoruka" icon="GitHub" />
-          <IconLink href="https://www.instagram.com/zoruka" icon="Instagram" />
-          <IconLink
-            href="https://www.linkedin.com/in/felipejmendes/"
-            icon="LinkedIn"
-          />
-          <IconLink href="mailto:zo.fmendes@gmail.com" icon="Mail" />
+          <IconLink href={Links.github} icon="GitHub" />
+          <IconLink href={Links.instagram} icon="Instagram" />
+          <IconLink href={Links.linkedIn} icon="LinkedIn" />
+          <IconLink href={Links.mail} icon="Mail" />
         </ProfileData>
       </Section>
     </Layout>
