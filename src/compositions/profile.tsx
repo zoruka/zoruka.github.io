@@ -26,21 +26,19 @@ const Links = {
 export const ProfileComposition: React.FC = () => {
   return (
     <Layout theme="dark">
-      <Section>
-        <TalkBalloon>Hello World!</TalkBalloon>
-        <ProfileAvatar />
+      <TalkBalloon>Hello World!</TalkBalloon>
+      <ProfileAvatar />
 
-        {Object.entries(Profile).map(([label, data]) => (
-          <ProfileData label={label}>{data}</ProfileData>
-        ))}
+      {Object.entries(Profile).map(([label, data]) => (
+        <ProfileData label={label}>{data}</ProfileData>
+      ))}
 
-        <ProfileData label="Find Me">
-          <IconLink href={Links.github} icon="GitHub" />
-          <IconLink href={Links.instagram} icon="Instagram" />
-          <IconLink href={Links.linkedIn} icon="LinkedIn" />
-          <IconLink href={Links.mail} icon="Mail" />
-        </ProfileData>
-      </Section>
+      <ProfileData label="Find Me">
+        <IconLink href={Links.github} icon="GitHub" />
+        <IconLink href={Links.instagram} icon="Instagram" />
+        <IconLink href={Links.linkedIn} icon="LinkedIn" />
+        <IconLink href={Links.mail} icon="Mail" />
+      </ProfileData>
     </Layout>
   );
 };

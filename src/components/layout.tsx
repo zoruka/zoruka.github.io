@@ -57,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const LayoutContainer = styled.div<Themed>`
+const LayoutContainer = styled.section<Themed>`
   background-color: ${({ theme }) => `var(--${theme})`};
   color: ${({ theme }) => (theme === 'dark' ? 'var(--light)' : 'var(--dark)')};
 `;
