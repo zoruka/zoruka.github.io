@@ -5,7 +5,6 @@ import {
   Layout,
   ProfileAvatar,
   ProfileData,
-  Section,
   TalkBalloon,
 } from '../components';
 

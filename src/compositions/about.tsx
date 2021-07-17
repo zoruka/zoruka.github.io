@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Section } from '../components';
+import { Layout } from '../components';
 
 export const AboutComposition: React.FC = () => {
   return (
