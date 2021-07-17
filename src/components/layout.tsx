@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import Footer from './footer';
+import { Footer } from './footer';
 
 interface Themed {
   theme: 'dark' | 'light';
@@ -84,7 +84,7 @@ const LayoutHelmet: React.FC<{ title?: string }> = ({
   );
 };
 
-const Layout: React.FC<LayoutProps> = ({ children, theme }) => {
+export const Layout: React.FC<LayoutProps> = ({ children, theme }) => {
   return (
     <LayoutContainer theme={theme}>
       <ContentContainer>
@@ -96,5 +96,3 @@ const Layout: React.FC<LayoutProps> = ({ children, theme }) => {
     </LayoutContainer>
   );
 };
-
-export default Layout;

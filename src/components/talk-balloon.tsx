@@ -131,7 +131,7 @@ const AnimatedStroke: React.FC = () => {
   );
 };
 
-const TalkBalloon: React.FC<{
+export const TalkBalloon: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   return (
@@ -141,5 +141,3 @@ const TalkBalloon: React.FC<{
     </Container>
   );
 };
-
-export default TalkBalloon;

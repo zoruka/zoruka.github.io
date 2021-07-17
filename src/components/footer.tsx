@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Footer = styled.footer`
+export const Footer = styled.footer`
   flex: 1;
   min-height: 60px;
   position: relative;
@@ -28,5 +28,3 @@ const Footer = styled.footer`
     }
   }
 `;
-
-export default Footer;

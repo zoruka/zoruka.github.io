@@ -21,7 +21,7 @@ const IconLinkContainer = styled.a`
   }
 `;
 
-const IconLink: React.FC<{
+export const IconLink: React.FC<{
   href: string;
   icon: keyof typeof Icons;
 }> = ({ href, icon }) => {
@@ -31,5 +31,3 @@ const IconLink: React.FC<{
     </IconLinkContainer>
   );
 };
-
-export default IconLink;

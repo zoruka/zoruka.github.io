@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Section = styled.section`
+export const Section = styled.section`
   position: relative;
   overflow: visible;
   width: 100%;
@@ -11,5 +11,3 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
 `;
-
-export default Section;

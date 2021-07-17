@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ProfileAvatar = styled.div`
+export const ProfileAvatar = styled.div`
   position: relative;
   background-image: url('https://avatars1.githubusercontent.com/u/30053103');
   width: 10rem;
@@ -46,5 +46,3 @@ const ProfileAvatar = styled.div`
     }
   }
 `;
-
-export default ProfileAvatar;

@@ -27,7 +27,7 @@ const DataContainer = styled.div`
   }
 `;
 
-const ProfileData: React.FC<{
+export const ProfileData: React.FC<{
   label: string;
   children: React.ReactNode;
 }> = ({ label, children }) => {
@@ -38,5 +38,3 @@ const ProfileData: React.FC<{
     </DataContainer>
   );
 };
-
-export default ProfileData;

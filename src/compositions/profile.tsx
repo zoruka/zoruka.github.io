@@ -1,11 +1,13 @@
 import React from 'react';
-import IconLink from '../components/icon-link';
-import Layout from '../components/layout';
-import ProfileAvatar from '../components/profile-avatar';
-import ProfileData from '../components/profile-data';
-import Section from '../components/section';
-import TalkBalloon from '../components/talk-balloon';
 import { getLevel } from '../utils';
+import {
+  IconLink,
+  Layout,
+  ProfileAvatar,
+  ProfileData,
+  Section,
+  TalkBalloon,
+} from '../components';
 
 const Profile = {
   name: 'Felipe Juvêncio Mendes',
