@@ -2,7 +2,11 @@ import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Footer from './footer';
-interface LayoutProps {
+
+interface Themed {
+  theme: 'dark' | 'light';
+}
+interface LayoutProps extends Themed {
   children: React.ReactNode;
   title?: string;
 }
@@ -12,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     --dark: #323232;
     --blue: #006aff;
     --light: #fff;
-    --default-shadow: 1px 0 3px 1px #000;
+    --default-shadow: 0px 0 3px 1px #222;
   }
 
   * {
@@ -23,6 +27,13 @@ const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
+    color: var(--blue);
+  }
+
+  p {
+    font-family: monospace;
+    font-size: 18px;
+    text-align: left;
   }
   
   #___gatsby, #gatsby-focus-wrapper {
@@ -46,19 +57,20 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const LayoutContainer = styled.div`
-  padding: 10vh 0 0 0;
+const LayoutContainer = styled.div<Themed>`
+  background-color: ${({ theme }) => `var(--${theme})`};
+  color: ${({ theme }) => (theme === 'dark' ? 'var(--light)' : 'var(--dark)')};
+`;
+
+const ContentContainer = styled.div`
+  padding: 5vh 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
-  width: 648px;
+  max-width: 648px;
   margin: 0 auto;
-
-  @media screen and (max-width: 648px) {
-    width: 100%;
-  }
 `;
 
 const LayoutHelmet: React.FC<{ title?: string }> = ({
@@ -72,16 +84,16 @@ const LayoutHelmet: React.FC<{ title?: string }> = ({
   );
 };
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, theme }) => {
   return (
-    <>
-      <LayoutContainer>
+    <LayoutContainer theme={theme}>
+      <ContentContainer>
         <LayoutHelmet />
         <GlobalStyle />
         {children}
-      </LayoutContainer>
+      </ContentContainer>
       <Footer />
-    </>
+    </LayoutContainer>
   );
 };
 
