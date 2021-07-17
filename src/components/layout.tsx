@@ -3,7 +3,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 import { Footer } from './footer';
 
-interface Themed {
+export interface Themed {
   theme: 'dark' | 'light';
 }
 interface LayoutProps extends Themed {
@@ -92,7 +92,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, theme }) => {
         <GlobalStyle />
         {children}
       </ContentContainer>
-      <Footer />
+      <Footer theme={theme} />
     </LayoutContainer>
   );
 };

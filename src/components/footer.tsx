@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { Themed } from './layout';
 
-export const Footer = styled.footer`
+export const Footer = styled.footer<Themed>`
   flex: 1;
   min-height: 60px;
   position: relative;
@@ -15,7 +16,8 @@ export const Footer = styled.footer`
     width: 200%;
     position: absolute;
     bottom: 30px;
-    border-bottom: 1px dashed var(--light);
+    border-bottom: 1px dashed
+      ${({ theme }) => (theme === 'dark' ? `var(--light)` : `var(--dark)`)};
     animation: move-dashes 10s infinite linear;
   }
 
