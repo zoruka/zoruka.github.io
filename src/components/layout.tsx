@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: monospace;
     font-size: 18px;
     text-align: left;
+    padding: 0 15px;
   }
   
   #___gatsby, #gatsby-focus-wrapper {
@@ -58,12 +59,13 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const LayoutContainer = styled.section<Themed>`
+  position: relative;
   background-color: ${({ theme }) => `var(--${theme})`};
   color: ${({ theme }) => (theme === 'dark' ? 'var(--light)' : 'var(--dark)')};
 `;
 
 const ContentContainer = styled.div`
-  padding: 5vh 0 0 0;
+  padding: 5vh 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -92,7 +94,6 @@ export const Layout: React.FC<LayoutProps> = ({ children, theme }) => {
         <GlobalStyle />
         {children}
       </ContentContainer>
-      <Footer theme={theme} />
     </LayoutContainer>
   );
 };

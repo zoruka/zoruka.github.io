@@ -1,10 +1,12 @@
 import React from 'react';
 import { Layout } from '../components';
+import { SquaresDivider } from '../components/squares-divider';
 
 export const AboutComposition: React.FC = () => {
   return (
     <Layout theme="light">
-      <h1>About Me</h1>
+      <SquaresDivider theme="light" />
+      <h1>Lore</h1>
       <p>
         A tech enthusiast since I was a kid, I started writing my first lines of
         code around age 13, just for fun. Instigated by curiosity, I have
