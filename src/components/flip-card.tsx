@@ -2,10 +2,8 @@ import React, { PropsWithChildren, ReactNode } from 'react';
 import { useState } from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div<{ width: string; height: string }>`
+const Container = styled.div`
   background-color: transparent;
-  width: ${({ width }) => width};
-  height: ${({ height }) => height};
   perspective: 1000px;
 `;
 
@@ -39,23 +37,17 @@ const Back = styled.div`
 
 interface FlipCardProps extends PropsWithChildren<unknown> {
   children: [ReactNode, ReactNode];
-  width: string;
-  height: string;
+  className: string;
 }
 
-export const FlipCard: React.FC<FlipCardProps> = ({
-  children,
-  width,
-  height,
-}) => {
+export const FlipCard: React.FC<FlipCardProps> = ({ children, className }) => {
   const [active, setActive] = useState(false);
 
   return (
     <Container
       onMouseOver={() => setActive(true)}
       onMouseOut={() => setActive(false)}
-      width={width}
-      height={height}
+      className={className}
     >
       <Inner active={active}>
         <Front>{children[0]}</Front>
