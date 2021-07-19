@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Layout, FlipCard } from '../components';
+import { Layout, FlipCard, SectionHeading } from '../components';
 import Icons from '../assets/icons';
 
 const CardFace = styled.div`
@@ -72,7 +72,7 @@ export const SkillsComposition: React.FC = () => {
       theme="light"
       style={{ paddingTop: '0px', width: '900px', maxWidth: '100%' }}
     >
-      <h1>🤹🏼 Skills 🤹🏼</h1>
+      <SectionHeading theme="light">🤹🏼 Skills 🤹🏼</SectionHeading>
 
       <CardsGrid>
         {SkillCards.map(({ icon, name, description }) => (
