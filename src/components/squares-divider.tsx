@@ -4,7 +4,7 @@ import { Themed } from './layout';
 
 const Config = {
   size: 4,
-  grid: 5,
+  grid: 3,
 };
 
 const Container = styled.div`
@@ -17,21 +17,25 @@ const Container = styled.div`
 interface SquareProps extends Themed {
   x: number;
   y: number;
+  orientation: 'left' | 'right';
 }
 
 const Square = styled.div<SquareProps>`
   position: absolute;
-  right: ${({ x }) => x * Config.size}vw;
+
   top: ${({ y }) => y * Config.size}vw;
   background-color: ${({ theme }) => `var(--${theme})`};
 
-  outline: 1px solid white;
+  outline: 1px solid ${({ theme }) => `var(--${theme})`};
 
   width: ${Config.size}vw;
   height: ${Config.size}vw;
+  /* ${({ orientation }) => orientation}: ${({ x }) => x * Config.size}vw; */
 `;
 
-export const SquaresDivider: React.FC<Themed> = ({ theme }) => {
+export const SquaresDivider: React.FC<
+  Themed & { orientation: 'left' | 'right' }
+> = ({ theme, orientation }) => {
   const matrix: boolean[][] = [];
 
   for (let i = 0; i < Config.grid; i++) {
@@ -44,7 +48,12 @@ export const SquaresDivider: React.FC<Themed> = ({ theme }) => {
   return (
     <Container>
       {matrix.map((row, x) =>
-        row.map((column, y) => column && <Square x={x} y={y} theme={theme} />)
+        row.map(
+          (column, y) =>
+            column && (
+              <Square x={x} y={y} theme={theme} orientation={orientation} />
+            )
+        )
       )}
     </Container>
   );
