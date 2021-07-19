@@ -61,7 +61,6 @@ const LayoutContainer = styled.section<Themed>`
   position: relative;
   background-color: ${({ theme }) => `var(--${theme})`};
   color: ${({ theme }) => (theme === 'dark' ? 'var(--light)' : 'var(--dark)')};
-  min-height: 100vh;
 
   * {
     text-shadow: 0px 0 3px
