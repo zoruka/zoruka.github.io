@@ -5,8 +5,7 @@ import { Helmet } from 'react-helmet';
 export interface Themed {
   theme: 'dark' | 'light';
 }
-interface LayoutProps extends Themed {
-  children: React.ReactNode;
+interface LayoutProps extends Themed, React.HTMLAttributes<HTMLDivElement> {
   title?: string;
 }
 
@@ -90,10 +89,14 @@ const LayoutHelmet: React.FC<{ title?: string }> = ({
   );
 };
 
-export const Layout: React.FC<LayoutProps> = ({ children, theme }) => {
+export const Layout: React.FC<LayoutProps> = ({
+  children,
+  theme,
+  ...props
+}) => {
   return (
     <LayoutContainer theme={theme}>
-      <ContentContainer>
+      <ContentContainer {...props}>
         <LayoutHelmet />
         <GlobalStyle />
         {children}

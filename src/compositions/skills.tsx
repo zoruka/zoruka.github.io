@@ -34,12 +34,13 @@ const CardsGrid = styled.div`
   width: 100%;
 
   .flip-card {
-    width: 200px;
-    height: 200px;
-    margin: 5px;
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    padding: 15px;
 
     @media screen and (max-width: 648px) {
-      width: calc(100% - 20px);
+      width: calc(100% - 60px);
     }
   }
 `;
@@ -67,7 +68,10 @@ const SkillCards = [
 
 export const SkillsComposition: React.FC = () => {
   return (
-    <Layout theme="light">
+    <Layout
+      theme="light"
+      style={{ paddingTop: '0px', width: '900px', maxWidth: '100%' }}
+    >
       <h1>Primary Skills</h1>
 
       <CardsGrid>
