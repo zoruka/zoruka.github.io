@@ -9,7 +9,7 @@ const IconLinkContainer = styled.a`
     width: 2.3rem;
     height: 2.3rem;
     fill: var(--light);
-    filter: drop-shadow(0 0 3px var(--dark));
+    filter: drop-shadow(0 0 3px #000);
 
     transition: all 500ms ease-out;
   }
