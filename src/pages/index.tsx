@@ -1,5 +1,9 @@
 import React from 'react';
-import { AboutComposition, SkillsComposition } from '../compositions';
+import {
+  AboutComposition,
+  JobsComposition,
+  SkillsComposition,
+} from '../compositions';
 import { ProfileComposition } from '../compositions/profile';
 
 const HomePage: React.FC = () => {
@@ -8,6 +12,7 @@ const HomePage: React.FC = () => {
       <ProfileComposition />
       <AboutComposition />
       <SkillsComposition />
+      <JobsComposition />
     </>
   );
 };
