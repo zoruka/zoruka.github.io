@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutComposition } from '../compositions';
+import { AboutComposition, SkillsComposition } from '../compositions';
 import { ProfileComposition } from '../compositions/profile';
 
 const HomePage: React.FC = () => {
@@ -7,6 +7,7 @@ const HomePage: React.FC = () => {
     <>
       <ProfileComposition />
       <AboutComposition />
+      <SkillsComposition />
     </>
   );
 };
