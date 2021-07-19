@@ -13,25 +13,17 @@ export const AboutComposition: React.FC = () => {
         better than yesterday.
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum
-        quam eget libero pretium cursus. Maecenas sed mi felis. Etiam eu ipsum
-        et libero tristique malesuada. Sed nulla neque, fringilla nec enim eget,
-        scelerisque feugiat est. Suspendisse potenti. Aliquam quis velit
-        imperdiet, feugiat mi non, cursus mi. Vestibulum ut interdum nisi, sed
-        scelerisque odio. Vestibulum venenatis pretium purus, eu venenatis
-        tortor mattis eu. Ut velit ex, tempor in neque et, volutpat sodales sem.
-        Integer luctus, dolor sed laoreet viverra, sapien ante tincidunt ex, eu
-        vulputate purus enim at odio.
+        Free time gamer, I like to spend my enjoying a good time hanging out,
+        reading good books, going to parties or just watching movies. Always
+        trying get the best part of everything, focused to get good experiences
+        of everything. I like people that is open minded to free talk about
+        everything at all.
       </p>
       <p>
-        Donec bibendum quam interdum ex lacinia blandit. Nullam ac bibendum
-        metus, ac porta tortor. Mauris tristique ante non commodo facilisis.
-        Aliquam lacinia sed orci in malesuada. Duis in venenatis odio. In ac
-        enim ut ipsum tempus lacinia. Vestibulum euismod commodo risus id
-        bibendum. Mauris vel ex auctor, dignissim tortor eu, eleifend massa.
-        Pellentesque porttitor turpis ex, eget sagittis ligula aliquam in. Nam
-        ultrices diam quis enim consequat, nec rutrum velit bibendum. Phasellus
-        quis odio a tortor viverra mollis vitae non dolor.
+        As a professional, I always want to keep a great place to work as team.
+        I like to keep in touch with everybody and spread all the knowledge.
+        I'll stay fine in a place that people like to help each other to grow
+        together and achieve objectives with team work.
       </p>
     </Layout>
   );
