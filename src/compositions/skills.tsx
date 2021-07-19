@@ -23,7 +23,11 @@ const CardFace = styled.div`
   }
 
   p {
-    font-size: 11px;
+    font-size: 12px;
+  }
+
+  li {
+    padding: 4px 0;
   }
 `;
 
@@ -50,19 +54,19 @@ const SkillCards = [
     icon: 'ReactJS',
     name: 'React.js',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum quam eget libero pretium cursus. Maecenas sed mi felis. Etiam eu ipsum et libero tristique malesuada. Sed nulla neque, fringilla nec enim eget, scelerisque feugiat est. Suspendisse potenti. Aliquam quis velit imperdiet, feugiat mi non, cursus mi.',
+      'Full projects developed.\nMain concepts learned pratically with production projects from scratch to deploy.\nComplete knowledge of Hooks usage.\nKnowledge of used in React libraries such as styled-components, redux and material-ui.',
   },
   {
     icon: 'NodeJS',
     name: 'Node.js',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum quam eget libero pretium cursus. Maecenas sed mi felis. Etiam eu ipsum et libero tristique malesuada. Sed nulla neque, fringilla nec enim eget, scelerisque feugiat est. Suspendisse potenti. Aliquam quis velit imperdiet, feugiat mi non, cursus mi.',
+      'A lot of daily problems solver and automation projects developed.\nKnowledge in use of a lot of different frameworks based on Node.js such as Express.js, React, Angular, Ionic.\nKnowledge of unit testing with Jest.js.',
   },
   {
     icon: 'Typescript',
     name: 'Typescript',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce elementum quam eget libero pretium cursus. Maecenas sed mi felis. Etiam eu ipsum et libero tristique malesuada. Sed nulla neque, fringilla nec enim eget, scelerisque feugiat est. Suspendisse potenti. Aliquam quis velit imperdiet, feugiat mi non, cursus mi.',
+      'Full projects developed from scratch to deploy.\nComplete knowledge of building advanced types.\nProjects developed with a lot of different Node.js based frameworks.',
   },
 ];
 
@@ -82,7 +86,11 @@ export const SkillsComposition: React.FC = () => {
               {name}
             </CardFace>
             <CardFace>
-              <p>{description}</p>
+              <p>
+                {description.split('\n').map((text) => (
+                  <li>{text}</li>
+                ))}
+              </p>
             </CardFace>
           </FlipCard>
         ))}
