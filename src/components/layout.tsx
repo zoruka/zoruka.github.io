@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
-import { Footer } from './footer';
 
 export interface Themed {
   theme: 'dark' | 'light';
@@ -21,13 +20,13 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    text-shadow: 1px 0 3px #000;
   }
 
 
   h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     color: var(--blue);
+    text-transform: uppercase;
   }
 
   p {
@@ -62,6 +61,12 @@ const LayoutContainer = styled.section<Themed>`
   position: relative;
   background-color: ${({ theme }) => `var(--${theme})`};
   color: ${({ theme }) => (theme === 'dark' ? 'var(--light)' : 'var(--dark)')};
+  min-height: 100vh;
+
+  * {
+    text-shadow: 0px 0 3px
+      ${({ theme }) => (theme === 'dark' ? '#000' : '#888')};
+  }
 `;
 
 const ContentContainer = styled.div`
