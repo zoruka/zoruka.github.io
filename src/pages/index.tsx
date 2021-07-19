@@ -1,4 +1,5 @@
 import React from 'react';
+import { Footer } from '../components';
 import {
   AboutComposition,
   JobsComposition,
@@ -13,6 +14,7 @@ const HomePage: React.FC = () => {
       <AboutComposition />
       <SkillsComposition />
       <JobsComposition />
+      <Footer />
     </>
   );
 };

@@ -1,7 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
-import { Themed } from './layout';
 
-export const Footer = styled.footer<Themed>`
+const Container = styled.footer`
   flex: 1;
   min-height: 60px;
   position: relative;
@@ -10,15 +10,21 @@ export const Footer = styled.footer<Themed>`
   align-items: center;
   overflow: hidden;
   width: 100%;
+  background-color: var(--blue);
+  font-family: monospace;
 
   &::after {
     content: ' ';
     width: 200%;
     position: absolute;
-    bottom: 30px;
-    border-bottom: 1px dashed
-      ${({ theme }) => (theme === 'dark' ? `var(--light)` : `var(--dark)`)};
+    top: 0;
+    border-top: 1px dashed var(--light);
     animation: move-dashes 10s infinite linear;
+  }
+
+  a {
+    color: var(--light);
+    margin-left: 8px;
   }
 
   @keyframes move-dashes {
@@ -30,3 +36,12 @@ export const Footer = styled.footer<Themed>`
     }
   }
 `;
+
+export const Footer: React.FC = () => {
+  return (
+    <Container>
+      <span>Made with ❤️ by </span>
+      <a href="https://github.com/zoruka">zoruka</a>
+    </Container>
+  );
+};
