@@ -30,7 +30,8 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     font-family: monospace;
-    font-size: 18px;
+    font-size: 1.1em;
+    line-height: 1.3em;
     text-align: left;
     padding: 0 15px;
   }

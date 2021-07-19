@@ -10,7 +10,7 @@ const DataContainer = styled.div`
   padding: 1.5rem 0.8rem;
 
   span {
-    font-size: 1.2rem;
+    font-size: 1.2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +18,7 @@ const DataContainer = styled.div`
 
   label {
     position: absolute;
-    font-size: 0.6rem;
+    font-size: 10px;
     left: 0;
     right: 0;
     bottom: 0.5rem;
