@@ -72,7 +72,7 @@ export const SkillsComposition: React.FC = () => {
       theme="light"
       style={{ paddingTop: '0px', width: '900px', maxWidth: '100%' }}
     >
-      <h1>Primary Skills</h1>
+      <h1>🤹🏼 Skills 🤹🏼</h1>
 
       <CardsGrid>
         {SkillCards.map(({ icon, name, description }) => (
