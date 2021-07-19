@@ -54,13 +54,13 @@ const SkillCards = [
     icon: 'ReactJS',
     name: 'React.js',
     description:
-      'Full projects developed.\nMain concepts learned pratically with production projects from scratch to deploy.\nComplete knowledge of Hooks usage.\nKnowledge of used in React libraries such as styled-components, redux and material-ui.',
+      'Full projects developed.\nMain concepts learned pratically with production projects from scratch to deploy.\nComplete knowledge of Hooks usage.\nExperience in many React libraries such as styled-components, redux and material-ui.',
   },
   {
     icon: 'NodeJS',
     name: 'Node.js',
     description:
-      'A lot of daily problems solver and automation projects developed.\nKnowledge in use of a lot of different frameworks based on Node.js such as Express.js, React, Angular, Ionic.\nKnowledge of unit testing with Jest.js.',
+      'A lot of daily problems solver and automation projects developed.\nKnowledge in many different frameworks based on Node.js such as Express.js, React, Angular, Ionic.\nKnowledge in unit testing with Jest.js.',
   },
   {
     icon: 'Typescript',
