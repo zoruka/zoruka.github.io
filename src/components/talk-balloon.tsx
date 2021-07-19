@@ -17,6 +17,7 @@ const Container = styled.div`
   filter: drop-shadow(0 0 3px var(--dark));
   background-color: var(--light);
 
+  font-family: 'Press Start 2P', monospace;
   text-shadow: 0px 0 0px #222;
 
   &::before {
