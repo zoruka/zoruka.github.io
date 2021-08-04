@@ -2,6 +2,7 @@ import React from 'react';
 import { Footer } from '../components';
 import {
   AboutComposition,
+  AcademicComposition,
   JobsComposition,
   SkillsComposition,
 } from '../compositions';
@@ -14,6 +15,7 @@ const HomePage: React.FC = () => {
       <AboutComposition />
       <SkillsComposition />
       <JobsComposition />
+      <AcademicComposition />
       <Footer />
     </>
   );
