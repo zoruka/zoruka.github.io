@@ -101,12 +101,21 @@ export const AcademicComposition: React.FC = () => {
               </DataSubtitle>
             </DataHeader>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              turpis lectus, feugiat vel egestas sit amet, lacinia at velit.
-              Pellentesque congue ante sit amet fermentum sollicitudin. Aenean
-              eu egestas tellus. Donec dictum leo non iaculis tincidunt. Mauris
-              vulputate sed ipsum vel vehicula. In hac habitasse platea
-              dictumst. Curabitur nec magna ligula.
+              Here I had experiences with real world software projects, theories
+              and algorithms. I had developed many different projects in a lot
+              of different situations. I participated of many algorithm
+              competitions and trainings. I also participated of a science and
+              engineering fair with a project named{' '}
+              <HyperLink href="https://inatel.br/imprensa/noticias/educacao/3110-36-fetin-inova-surpreende-e-reune-inovacoes-para-um-futuro-mais-sustentavel">
+                EasyOrder
+              </HyperLink>
+              , my team won the first place of level 1. During the last years of
+              the course, I worked as a volunteer in the marketing department of
+              the{' '}
+              <HyperLink href="https://www.linkedin.com/company/aaainatel">
+                Athletic Academic Association
+              </HyperLink>
+              .
             </p>
           </DataContainer>
           <TimelineContainer>
