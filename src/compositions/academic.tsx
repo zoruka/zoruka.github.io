@@ -79,6 +79,10 @@ const Container = styled.div`
   margin: 2em 0;
 `;
 
+const HyperLink = styled.a`
+  color: var(--blue);
+`;
+
 export const AcademicComposition: React.FC = () => {
   return (
     <Layout theme="dark" style={{ paddingTop: '0px' }}>
@@ -124,12 +128,17 @@ export const AcademicComposition: React.FC = () => {
               </DataSubtitle>
             </DataHeader>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              turpis lectus, feugiat vel egestas sit amet, lacinia at velit.
-              Pellentesque congue ante sit amet fermentum sollicitudin. Aenean
-              eu egestas tellus. Donec dictum leo non iaculis tincidunt. Mauris
-              vulputate sed ipsum vel vehicula. In hac habitasse platea
-              dictumst. Curabitur nec magna ligula.
+              Here I had my first experiences with electronics and embedded
+              development. Every year during the course, I had to make a great
+              group project, to present in a science fair that happens on end of
+              each year.{' '}
+              <HyperLink href="http://2016.febrace.org.br/virtual/2016/ENG/15/">
+                One of the projects
+              </HyperLink>{' '}
+              got classified to a brazilian national science fair, and my team
+              won as the fourth best engineering project of the year. I also had
+              my first touches with C and C++ languages. I was able to solve
+              problems and participate of programming challenge events.
             </p>
           </DataContainer>
           <TimelineContainer>
