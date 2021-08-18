@@ -20,10 +20,10 @@ export const AboutComposition: React.FC = () => {
         everything at all.
       </p>
       <p>
-        As a professional, I always want to keep a great place to work as team.
-        I like to keep in touch with everybody and spread all the knowledge.
-        I'll stay fine in a place that people like to help each other to grow
-        together and achieve objectives with team work.
+        As a professional, I always want to keep a great place to work as a
+        team. I like to keep in touch with everybody and spread all the
+        knowledge. I'll stay fine in a place that people like to help each other
+        to grow together and achieve objectives with teamwork.
       </p>
     </Layout>
   );

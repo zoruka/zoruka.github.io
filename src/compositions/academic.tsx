@@ -146,8 +146,8 @@ export const AcademicComposition: React.FC = () => {
               </HyperLink>{' '}
               got classified to a brazilian national science fair, and my team
               won as the fourth best engineering project of the year. I also had
-              my first touches with C and C++ languages. I was able to solve
-              problems and participate of programming challenge events.
+              my first touch with C and C++ languages. I was able to solve
+              problems and participate in programming challenge events.
             </p>
           </DataContainer>
           <TimelineContainer>

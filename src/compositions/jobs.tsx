@@ -103,9 +103,8 @@ export const JobsComposition: React.FC = () => {
               I started working just as a frontend developer, always keeping
               apart with UX tendencies. By the time I was receiving more
               responsibilities and start to help in product creations. Now I
-              work as a tech leader mentoring new developers, but in the most
-              time I am developing too. I have worked in several parts of the
-              company.
+              work as a tech leader mentoring new developers, but in the time I
+              am developing too. I have worked in several parts of the company.
             </p>
           </DataContainer>
         </TimeSection>
