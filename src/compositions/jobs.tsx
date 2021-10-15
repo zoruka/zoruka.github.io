@@ -94,10 +94,27 @@ export const JobsComposition: React.FC = () => {
           <DataContainer>
             <DataHeader>
               <DataHeading>
+                Frontend Developer - <a href="https://fleek.co/">Fleek</a>
+              </DataHeading>
+              <DataSubtitle>From: October/2021 - To: Now</DataSubtitle>
+            </DataHeader>
+            <p>Working on frontend development to Internet Computer.</p>
+          </DataContainer>
+        </TimeSection>
+
+        <TimeSection>
+          <TimelineContainer>
+            <TimelineLine style={{ maxHeight: '8px' }} />
+            <TimelinePoint />
+            <TimelineLine />
+          </TimelineContainer>
+          <DataContainer>
+            <DataHeader>
+              <DataHeading>
                 Fullstack Developer -{' '}
                 <a href="https://keymax.com.br/">KeyMax</a>
               </DataHeading>
-              <DataSubtitle>From: July/2019 - To: Now</DataSubtitle>
+              <DataSubtitle>From: July/2019 - To: October/2021</DataSubtitle>
             </DataHeader>
             <p>
               I started working just as a frontend developer, always keeping
