@@ -1,0 +1,10 @@
+2:I[3959,["491","static/chunks/491-b78ae660b8342b39.js","82","static/chunks/82-8dd55c4e49d2e695.js","931","static/chunks/app/page-9cb879032a848e7b.js"],"ProfileComposition"]
+3:I[5594,["491","static/chunks/491-b78ae660b8342b39.js","82","static/chunks/82-8dd55c4e49d2e695.js","931","static/chunks/app/page-9cb879032a848e7b.js"],"AboutComposition"]
+4:I[38,["491","static/chunks/491-b78ae660b8342b39.js","82","static/chunks/82-8dd55c4e49d2e695.js","931","static/chunks/app/page-9cb879032a848e7b.js"],"Footer"]
+5:I[8897,["491","static/chunks/491-b78ae660b8342b39.js","185","static/chunks/app/layout-8c691a398d576066.js"],""]
+6:I[5613,[],""]
+7:I[1778,[],""]
+8:I[8667,["491","static/chunks/491-b78ae660b8342b39.js","396","static/chunks/396-713faa6d6969c796.js","82","static/chunks/82-8dd55c4e49d2e695.js","160","static/chunks/app/not-found-f83fdefcc4decaa4.js"],""]
+0:["MhJ1qdLQjG7Aea9Lkvf4i",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},["$L1",[["$","$L2",null,{}],["$","$L3",null,{}],["$","$L4",null,{}]],null]]},[null,["$","html",null,{"children":["$","body",null,{"className":"__className_d7a3f0","children":["$","$L5",null,{"children":["$","$L6",null,{"parallelRouterKey":"children","segmentPath":["children"],"loading":"$undefined","loadingStyles":"$undefined","loadingScripts":"$undefined","hasLoading":false,"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[],"styles":null}]}]}]}],null]],[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4d0509716a566ea4.css","precedence":"next","crossOrigin":""}]],"$L9"]]]]
+9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Hello World!"}],["$","meta","3",{"name":"description","content":"Zoruka's web page."}],["$","link","4",{"rel":"icon","href":"/icon.svg?61a2cc37dd1ca8d5","type":"image/svg+xml","sizes":"any"}],["$","meta","5",{"name":"next-size-adjust"}]]
+1:null
