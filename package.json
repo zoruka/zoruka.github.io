@@ -1,28 +1,30 @@
 {
-  "name": "zoruka",
-  "private": true,
-  "description": "Zoruka's web page.",
-  "version": "0.1.0",
-  "author": "Felipe Mendes <zo.fmendes@gmail.com>",
-  "dependencies": {
-    "next": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "styled-components": "^6.1.8"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@types/styled-components": "^5.1.4",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4",
-    "gh-pages": "^3.1.0",
-    "typescript": "^5"
-  },
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
-  }
+	"name": "zoruka",
+	"private": true,
+	"description": "Zoruka's web page.",
+	"version": "0.1.0",
+	"author": "Felipe Mendes <zo.fmendes@gmail.com>",
+	"dependencies": {
+		"next": "latest",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"styled-components": "^6.1.8"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"@types/styled-components": "^5.1.4",
+		"eslint": "^8",
+		"eslint-config-next": "14.0.4",
+		"gh-pages": "^3.1.0",
+		"serve": "^14.2.1",
+		"typescript": "^5"
+	},
+	"scripts": {
+		"dev": "next",
+		"build": "next build",
+		"start": "yarn build && serve out",
+		"deploy": "yarn build && gh-pages -d out"
+	}
 }
