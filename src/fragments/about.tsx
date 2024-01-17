@@ -20,7 +20,7 @@ export const AboutComposition: React.FC = () => {
 				opportunity to surpass the achievements of yesterday.
 			</p>
 
-			<div style={{ height: '3rem' }} />
+			<div style={{ height: '1.5rem' }} />
 
 			<JobsComposition />
 		</Layout>

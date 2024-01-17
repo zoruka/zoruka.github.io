@@ -77,17 +77,16 @@ const DataContainer = styled.div`
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
-	padding-right: 15px;
 
 	p {
-		padding: 15px 5px;
+		padding: 1rem 0.5rem;
 		margin: 0;
 	}
 `;
 const DataHeading = styled.h2`
-	font-size: 16px;
-	line-height: 18px;
-	margin: 5px 0px;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	margin: 0.5rem 0px;
 
 	color: var(--dark);
 	text-align: center;
@@ -97,7 +96,7 @@ const DataHeading = styled.h2`
 	}
 `;
 const DataSubtitle = styled.text`
-	font-size: 10px;
+	font-size: 0.6rem;
 	opacity: 0.5;
 `;
 const DataHeader = styled.div`
@@ -105,6 +104,4 @@ const DataHeader = styled.div`
 	width: 100%;
 `;
 
-const Container = styled.div`
-	margin: 2em 0;
-`;
+const Container = styled.div``;

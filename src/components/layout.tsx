@@ -29,7 +29,7 @@ const LayoutContainer = styled.section<Themed>`
 `;
 
 const ContentContainer = styled.div`
-	padding: 5vh 0;
+	padding: 5vh 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

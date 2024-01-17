@@ -10,7 +10,8 @@ const Container = styled.h1<Themed>`
 	position: relative;
 	overflow: hidden;
 	margin: unset;
-	padding: 0.83em 0;
+	padding: 0.83rem 0;
+	margin-bottom: 1.5rem;
 
 	&::after,
 	&::before {

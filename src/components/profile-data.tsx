@@ -20,7 +20,7 @@ const DataContainer = styled.div`
 
 	label {
 		position: absolute;
-		font-size: 10px;
+		font-size: 0.6rem;
 		left: 0;
 		right: 0;
 		bottom: 0.5rem;
