@@ -11,22 +11,21 @@ import {
 } from '../components';
 
 const Profile = {
-	name: 'Felipe Juvêncio Mendes',
+	name: 'Felipe Mendes',
 	level: `${getLevel()}`,
-	profession: 'Software Developer',
-	location: 'Santa Rita do Sapucaí, Brazil',
+	profession: 'Software Engineer',
+	location: 'Brazil',
 };
 
 const Links = {
 	github: 'https://github.com/zoruka',
-	instagram: 'https://www.instagram.com/zoruka',
-	linkedIn: 'https://www.linkedin.com/in/felipejmendes/',
-	mail: 'mailto:zo.fmendes@gmail.com',
+	twitter: 'https://twitter.com/_zoruka',
+	linkedIn: 'https://www.linkedin.com/in/felipejmendes',
 };
 
 export const ProfileComposition: React.FC = () => {
 	return (
-		<Layout theme="dark">
+		<Layout theme="dark" style={{ justifyContent: 'center' }}>
 			<TalkBalloon>Hello World!</TalkBalloon>
 			<ProfileAvatar />
 
@@ -36,9 +35,8 @@ export const ProfileComposition: React.FC = () => {
 
 			<ProfileData label="Find Me">
 				<IconLink href={Links.github} icon="GitHub" />
-				<IconLink href={Links.instagram} icon="Instagram" />
+				<IconLink href={Links.twitter} icon="Twitter" />
 				<IconLink href={Links.linkedIn} icon="LinkedIn" />
-				<IconLink href={Links.mail} icon="Mail" />
 			</ProfileData>
 		</Layout>
 	);

@@ -1,10 +1,6 @@
 import React from 'react';
 import { Footer } from '../components';
-import {
-	AboutComposition,
-	AcademicComposition,
-	JobsComposition,
-} from '../fragments';
+import { AboutComposition, JobsComposition } from '../fragments';
 import { ProfileComposition } from '../fragments/profile';
 
 const HomePage: React.FC = () => {
@@ -12,8 +8,6 @@ const HomePage: React.FC = () => {
 		<>
 			<ProfileComposition />
 			<AboutComposition />
-			<JobsComposition />
-			<AcademicComposition />
 			<Footer />
 		</>
 	);

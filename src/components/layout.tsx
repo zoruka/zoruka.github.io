@@ -7,13 +7,20 @@ export type Themed = {
 	theme: 'dark' | 'light';
 };
 
-type LayoutProps = React.PropsWithChildren<Themed>;
+type LayoutProps = React.PropsWithChildren<Themed> &
+	React.HTMLAttributes<HTMLDivElement>;
 
 const LayoutContainer = styled.section<Themed>`
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+
 	position: relative;
 	background-color: ${({ theme }) => `var(--${theme})`};
 	color: ${({ theme }) =>
 		theme === 'dark' ? 'var(--light)' : 'var(--dark)'};
+
+	min-height: 100vh;
 
 	* {
 		text-shadow: 0px 0 3px
@@ -25,17 +32,15 @@ const ContentContainer = styled.div`
 	padding: 5vh 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
 	align-items: center;
 
 	max-width: 648px;
-	min-height: 100vh;
 	margin: 0 auto;
 `;
 
-export const Layout: React.FC<LayoutProps> = ({ children, theme }) => {
+export const Layout: React.FC<LayoutProps> = ({ children, ...props }) => {
 	return (
-		<LayoutContainer theme={theme}>
+		<LayoutContainer {...props}>
 			<ContentContainer>{children}</ContentContainer>
 		</LayoutContainer>
 	);

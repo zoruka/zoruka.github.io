@@ -9,8 +9,8 @@ const pressStart = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
-	title: 'zoruka',
-	description: 'my web page',
+	title: 'Hello World!',
+	description: "Zoruka's web page.",
 };
 
 export default function RootLayout({

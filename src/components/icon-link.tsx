@@ -8,8 +8,7 @@ const IconLinkContainer = styled.a`
 	padding: 0 10px;
 
 	svg {
-		width: 2.3rem;
-		height: 2.3rem;
+		font-size: 2.3rem;
 		fill: var(--light);
 		filter: drop-shadow(0 0 3px #000);
 
