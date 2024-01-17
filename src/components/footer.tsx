@@ -13,7 +13,7 @@ const Container = styled.footer`
 	overflow: hidden;
 	width: 100%;
 	background-color: var(--blue);
-	font-family: monospace;
+	font-size: 0.6rem;
 
 	&::after {
 		content: ' ';
