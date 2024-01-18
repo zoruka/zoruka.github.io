@@ -20,6 +20,13 @@ export default function RootLayout({
 }) {
 	return (
 		<html>
+			<head>
+				<script
+					src="https://cdn.usefathom.com/script.js"
+					data-site="LSKJWSLH"
+					defer
+				></script>
+			</head>
 			<body className={pressStart.className}>
 				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
 			</body>
