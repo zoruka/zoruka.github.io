@@ -2,33 +2,29 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import styles from './talk-balloon.module.css';
 
-const Container = styled.div`
-	z-index: 10;
-	margin-bottom: -25px;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	color: var(--blue);
-	width: fit-content;
+export const TalkBalloon: React.FC<{
+	children: React.ReactNode;
+}> = ({ children }) => {
+	return (
+		<div className={styles.container}>
+			{children}
+			<AnimatedStroke />
+		</div>
+	);
+};
 
-	padding: 30px;
-	border-radius: 5px;
-	filter: drop-shadow(0 0 3px var(--dark));
-	background-color: var(--light);
-
-	text-shadow: 0px 0 0px #222;
-
-	&::before {
-		content: ' ';
-		bottom: -14px;
-		position: absolute;
-		border: 7px solid transparent;
-		border-top-color: var(--light);
-	}
-`;
+const AnimatedStroke: React.FC = () => {
+	return (
+		<StrokeContainer>
+			<StrokeLine orientation="horizontal-top" />
+			<StrokeLine orientation="horizontal-bottom" />
+			<StrokeLine orientation="vertical-right" />
+			<StrokeLine orientation="vertical-left" />
+		</StrokeContainer>
+	);
+};
 
 const StrokeContainer = styled.div`
 	position: absolute;
@@ -121,25 +117,3 @@ const StrokeLine = styled.div<{ orientation: string }>`
     }
   `}
 `;
-
-const AnimatedStroke: React.FC = () => {
-	return (
-		<StrokeContainer>
-			<StrokeLine orientation="horizontal-top" />
-			<StrokeLine orientation="horizontal-bottom" />
-			<StrokeLine orientation="vertical-right" />
-			<StrokeLine orientation="vertical-left" />
-		</StrokeContainer>
-	);
-};
-
-export const TalkBalloon: React.FC<{
-	children: React.ReactNode;
-}> = ({ children }) => {
-	return (
-		<Container>
-			{children}
-			<AnimatedStroke />
-		</Container>
-	);
-};

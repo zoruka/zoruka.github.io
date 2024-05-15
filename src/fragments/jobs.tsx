@@ -1,107 +1,70 @@
-'use client';
+import { SectionHeading } from '../components';
 
-import React from 'react';
-import styled from 'styled-components';
-import { Layout, SectionHeading } from '../components';
+import styles from './jobs.module.scss';
 
 export const JobsComposition: React.FC = () => {
-	return (
-		<>
-			<SectionHeading theme="light">⚔️ Adventures ⚔️</SectionHeading>
+  return (
+    <>
+      <SectionHeading theme="light">⚔️ Adventures ⚔️</SectionHeading>
 
-			<DataList
-				dataList={[
-					{
-						company: 'Fleek',
-						title: 'Software Engineer',
-						subtitle: 'From: October/2021 - To: Now',
-						description: '',
-						link: 'https://fleek.xyz',
-					},
-					{
-						company: 'KeyMax',
-						title: 'Fullstack Developer',
-						subtitle: 'From: July/2019 - To: October/2021',
-						description: '',
-						link: 'https://keymax.com.br',
-					},
-					{
-						company: 'ICC',
-						title: 'Software Development Intern',
-						subtitle: 'From: July/2017 - To: May/2019',
-						description: '',
-						link: 'https://inatel.br/icc',
-					},
-				]}
-			/>
-		</>
-	);
+      <DataList
+        dataList={[
+          {
+            company: 'Fleek',
+            title: 'Lead Frontend Engineer',
+            subtitle: 'From: October/2021 - To: May/2024',
+            description: '',
+            link: 'https://fleek.xyz',
+          },
+          {
+            company: 'KeyMax',
+            title: 'Full Stack Engineer',
+            subtitle: 'From: July/2019 - To: October/2021',
+            description: '',
+            link: 'https://keymax.com.br',
+          },
+          {
+            company: 'ICC',
+            title: 'Software Development Intern',
+            subtitle: 'From: July/2017 - To: May/2019',
+            description: '',
+            link: 'https://inatel.br/icc',
+          },
+        ]}
+      />
+    </>
+  );
 };
 
 type Data = {
-	title: string;
-	subtitle: string;
-	description: string;
-	link: string;
-	company: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  link: string;
+  company: string;
 };
 
 type DataListProps = {
-	dataList: Data[];
+  dataList: Data[];
 };
 
 const DataList: React.FC<DataListProps> = ({ dataList }) => {
-	return (
-		<Container>
-			{dataList.map(({ title, subtitle, description, link, company }) => (
-				<DataContainer>
-					<DataHeader>
-						<DataHeading>
-							{title} -&nbsp;
-							<a href={link} target="_blank">
-								{company}
-							</a>
-						</DataHeading>
-						<DataSubtitle>{subtitle}</DataSubtitle>
-					</DataHeader>
-					<p>{description}</p>
-				</DataContainer>
-			))}
-		</Container>
-	);
+  return (
+    <div className={styles.container}>
+      {dataList.map(({ title, subtitle, description, link, company }) => (
+        <div className={styles.dataContainer}>
+          <div className={styles.dataHeader}>
+            <h2 className={styles.dataHeading}>
+              {title} -&nbsp;
+              <a href={link} target="_blank">
+                {company}
+              </a>
+            </h2>
+            <span className={styles.dataSubtitle}>{subtitle}</span>
+          </div>
+          <p>{description}</p>
+        </div>
+      ))}
+    </div>
+  );
 };
-
-const DataContainer = styled.div`
-	flex: 1;
-	flex-direction: column;
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-
-	p {
-		padding: 1rem 0.5rem;
-		margin: 0;
-	}
-`;
-const DataHeading = styled.h2`
-	font-size: 1rem;
-	line-height: 1.2rem;
-	margin: 0.5rem 0px;
-
-	color: var(--dark);
-	text-align: center;
-
-	a {
-		color: var(--dark);
-	}
-`;
-const DataSubtitle = styled.text`
-	font-size: 0.6rem;
-	opacity: 0.5;
-`;
-const DataHeader = styled.div`
-	min-height: 45px;
-	width: 100%;
-`;
-
-const Container = styled.div``;

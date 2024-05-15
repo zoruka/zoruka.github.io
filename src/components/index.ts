@@ -5,5 +5,4 @@ export * from './profile-avatar';
 export * from './profile-data';
 export * from './section';
 export * from './talk-balloon';
-export * from './flip-card';
 export * from './section-heading';

@@ -1,0 +1,17 @@
+.link {
+  padding: 0 10px;
+
+  svg {
+    font-size: 2.3rem;
+    fill: var(--light);
+    filter: drop-shadow(0 0 3px #000);
+
+    transition: all 500ms ease-out;
+  }
+
+  &:hover {
+    svg {
+      fill: var(--blue);
+    }
+  }
+}

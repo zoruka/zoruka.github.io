@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.5rem 0.8rem;
+
+  span {
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  label {
+    position: absolute;
+    font-size: 0.6rem;
+    left: 0;
+    right: 0;
+    bottom: 0.5rem;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+}

@@ -1,15 +1,9 @@
-'use client';
+import { forwardRef } from 'react';
+import styles from './section.module.scss';
 
-import styled from 'styled-components';
-
-export const Section = styled.section`
-	position: relative;
-	overflow: visible;
-	width: 100%;
-	padding: 15px;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-`;
+export const Section = forwardRef<
+  HTMLDivElement,
+  React.HTMLProps<HTMLDivElement>
+>((props, ref) => {
+  return <div {...props} ref={ref} className={styles.section} />;
+});
