@@ -6,3 +6,4 @@ export * from './profile-data';
 export * from './section';
 export * from './talk-balloon';
 export * from './section-heading';
+export * from './fathom-analytics';

@@ -10,7 +10,7 @@ export type LayoutProps = React.HTMLAttributes<HTMLDivElement> &
 export const Layout: React.FC<LayoutProps> = ({
   children,
   className,
-  theme,
+  theme = 'dark',
   ...props
 }) => {
   return (

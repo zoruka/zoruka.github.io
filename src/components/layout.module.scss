@@ -8,20 +8,20 @@
 }
 
 .container_light {
-  background-color: var(--dark);
-  color: var(--light);
+  background-color: var(--light);
+  color: var(--dark);
 
   * {
     text-shadow: 0px 0 3px #888;
   }
 }
 
-.container_light {
-  background-color: var(--light);
-  color: var(--dark);
+.container_dark {
+  background-color: var(--dark);
+  color: var(--light);
 
   * {
-    text-shadow: 0px 0 3px #22222280;
+    text-shadow: 0px 0 3px #000;
   }
 }
 

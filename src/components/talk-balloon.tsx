@@ -8,14 +8,16 @@ import { cn } from '@/utils';
 export const TalkBalloon: React.FC<{
   children: string;
 }> = ({ children }) => {
-  const [text, setText] = useState(children[0]);
+  const [text, setText] = useState('');
 
   useEffect(() => {
+    const delay = text.length === 0 ? 500 : 250 - Math.random() * 210;
+
     const timeout = setTimeout(() => {
       if (text.length < children.length) {
         setText(children.slice(0, text.length + 1));
       }
-    }, 250 - Math.random() * 210);
+    }, delay);
 
     return () => clearTimeout(timeout);
   }, [text]);
@@ -67,65 +69,3 @@ const strokeLineVariants = cva(styles.stroke_line, {
     },
   },
 });
-
-// const StrokeLine = styled.div<{ orientation: string }>`
-
-//   border-left-width: ${(props) =>
-//     props.orientation.includes('left') ? '1px' : '0px'};
-
-//   border-bottom-width: ${(props) =>
-//     props.orientation.includes('bottom') ? '1px' : '0px'};
-//   border-right-width: ${(props) =>
-//     props.orientation.includes('right') ? '1px' : '0px'};
-
-//   ${(props) =>
-//     props.orientation.includes('top') &&
-//     `
-
-//   `}
-
-//   ${(props) =>
-//     props.orientation.includes('bottom') &&
-//     `
-//     bottom: 0;
-//     animation: stroke-bottom-transition 30s 0s infinite linear;
-//     @keyframes stroke-bottom-transition {
-//       from {
-//         transform: translate(0, 0);
-//       }
-//       to {
-//         transform: translate(-50%, 0);
-//       }
-//     }
-//   `}
-
-//   ${(props) =>
-//     props.orientation.includes('left') &&
-//     `
-//     left: 0;
-//     animation: stroke-left-transition 30s 0s infinite linear;
-//     @keyframes stroke-left-transition {
-//       from {
-//         transform: translate(0, 0);
-//       }
-//       to {
-//         transform: translate(0, -50%);
-//       }
-//     }
-//   `}
-
-//   ${(props) =>
-//     props.orientation.includes('right') &&
-//     `
-//     right: 0;
-//     animation: stroke-right-transition 30s 0s infinite linear;
-//     @keyframes stroke-right-transition {
-//       from {
-//         transform: translate(0, -50%);
-//       }
-//       to {
-//         transform: translate(0, 0);
-//       }
-//     }
-//   `}
-// `;

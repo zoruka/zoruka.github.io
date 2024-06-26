@@ -1267,6 +1267,11 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
+fathom-client@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/fathom-client/-/fathom-client-3.7.0.tgz#8be84d95ebb8f7266aaecc31edeb974a02f339e7"
+  integrity sha512-lMEyR3lSThlkK69+f/16OEyuii743iJGcZ6aIUKT5qYH9lGi7ENTYwuxh5NWWYSO6qs57we01nLxncW8kegJlw==
+
 file-entry-cache@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/file-entry-cache/-/file-entry-cache-6.0.1.tgz#211b2dd9659cb0394b073e7323ac3c933d522027"
