@@ -8,3 +8,7 @@ export const getLevel = (): number => {
       365
   );
 };
+
+export const cn = (...classes: (string | undefined)[]): string => {
+  return classes.filter(Boolean).join(' ');
+};

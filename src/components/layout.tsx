@@ -1,46 +1,30 @@
 'use client';
 
+import { VariantProps, cva } from 'class-variance-authority';
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import styles from './layout.module.scss';
 
-export type Themed = {
-  theme: 'dark' | 'light';
-};
+export type LayoutProps = React.HTMLAttributes<HTMLDivElement> &
+  VariantProps<typeof containerVariants>;
 
-type LayoutProps = React.PropsWithChildren<Themed> &
-  React.HTMLAttributes<HTMLDivElement>;
-
-const LayoutContainer = styled.section<Themed>`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  position: relative;
-  background-color: ${({ theme }) => `var(--${theme})`};
-  color: ${({ theme }) => (theme === 'dark' ? 'var(--light)' : 'var(--dark)')};
-
-  min-height: 100vh;
-
-  * {
-    text-shadow: 0px 0 3px
-      ${({ theme }) => (theme === 'dark' ? '#22222280' : '#888')};
-  }
-`;
-
-const ContentContainer = styled.div`
-  padding: 5vh 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  max-width: 648px;
-  margin: 0 auto;
-`;
-
-export const Layout: React.FC<LayoutProps> = ({ children, ...props }) => {
+export const Layout: React.FC<LayoutProps> = ({
+  children,
+  className,
+  theme,
+  ...props
+}) => {
   return (
-    <LayoutContainer {...props}>
-      <ContentContainer>{children}</ContentContainer>
-    </LayoutContainer>
+    <section className={containerVariants({ theme, className })} {...props}>
+      <div className={styles.content}>{children}</div>
+    </section>
   );
 };
+
+const containerVariants = cva(styles.container, {
+  variants: {
+    theme: {
+      light: styles.container_light,
+      dark: styles.container_dark,
+    },
+  },
+});

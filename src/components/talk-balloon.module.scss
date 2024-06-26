@@ -48,3 +48,87 @@
     }
   }
 }
+
+.stroke_container {
+  position: absolute;
+  overflow: hidden;
+
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  left: 7px;
+  top: 7px;
+  border-radius: 5px;
+}
+
+.stroke_line {
+  position: absolute;
+  border-style: dashed;
+  border-color: var(--blue);
+  border-width: 0px;
+}
+
+.stroke_line_horizontal {
+  width: 1000px;
+  height: 0px;
+}
+
+.stroke_line_vertical {
+  width: 0px;
+  height: 1000px;
+}
+
+.stroke_line_top {
+  top: 0;
+  border-top-width: 1px;
+  animation: stroke-top-transition 30s 0s infinite linear;
+  @keyframes stroke-top-transition {
+    from {
+      transform: translate(-50%, 0);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+.stroke_line_bottom {
+  bottom: 0;
+  border-bottom-width: 1px;
+  animation: stroke-bottom-transition 30s 0s infinite linear;
+  @keyframes stroke-bottom-transition {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.stroke_line_left {
+  left: 0;
+  border-left-width: 1px;
+  animation: stroke-left-transition 30s 0s infinite linear;
+  @keyframes stroke-left-transition {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.stroke_line_right {
+  right: 0;
+  border-right-width: 1px;
+  animation: stroke-right-transition 30s 0s infinite linear;
+  @keyframes stroke-right-transition {
+    from {
+      transform: translate(0, -50%);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+}

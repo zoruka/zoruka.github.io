@@ -1,0 +1,69 @@
+.heading {
+  width: 100%;
+  max-width: 648px;
+  position: relative;
+  overflow: hidden;
+  margin: unset;
+  padding: 0.83rem 0;
+  margin-bottom: 1.5rem;
+
+  &::after,
+  &::before {
+    transition: all 500ms ease-out;
+    content: ' ';
+    width: 200%;
+    position: absolute;
+  }
+
+  &::before {
+    bottom: 0;
+    animation: move-dashes-left 10s infinite linear;
+  }
+
+  &::after {
+    top: 0;
+    animation: move-dashes-right 10s infinite linear;
+  }
+
+  &:hover {
+    cursor: default;
+
+    &::after,
+    &::before {
+      border-bottom: 1px dashed var(--blue);
+      animation-duration: 5s;
+    }
+  }
+
+  @keyframes move-dashes-right {
+    from {
+      left: -50%;
+    }
+    to {
+      left: 0%;
+    }
+  }
+
+  @keyframes move-dashes-left {
+    from {
+      left: 0%;
+    }
+    to {
+      left: -50%;
+    }
+  }
+}
+
+.heading_light {
+  &::after,
+  &::before {
+    border-bottom: 1px dashed var(--dark);
+  }
+}
+
+.heading_dark {
+  &::after,
+  &::before {
+    border-bottom: 1px dashed var(--light);
+  }
+}
