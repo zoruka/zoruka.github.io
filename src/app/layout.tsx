@@ -1,3 +1,4 @@
+import { FathomAnalytics } from '@/components';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Press_Start_2P } from 'next/font/google';
@@ -19,14 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <head>
-        <script
-          src="https://cdn.usefathom.com/script.js"
-          data-site="LSKJWSLH"
-          defer
-        ></script>
-      </head>
-      <body className={pressStart.className}>{children}</body>
+      <body className={pressStart.className}>
+        <FathomAnalytics trackingCode="LSKJWSLH" />
+        {children}
+      </body>
     </html>
   );
 }
