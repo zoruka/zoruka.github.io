@@ -7,7 +7,7 @@ publish(
   {
     branch: 'gh-pages',
     nojekyll: true,
-    cname: 'www.zoruka.xyz',
+    cname: 'zoruka.xyz',
   },
   (error) => {
     if (error) {
