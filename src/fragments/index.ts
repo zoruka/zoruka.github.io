@@ -1,3 +1,3 @@
 export * from './about';
-export * from './profile';
+export * from './profile.fragment';
 export * from './jobs';

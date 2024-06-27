@@ -1,41 +1,16 @@
-import { getLevel } from '@/utils';
-import {
-  IconLink,
-  Layout,
-  ProfileAvatar,
-  ProfileData,
-  TalkBalloon,
-} from '../components';
-import styles from './page.module.scss';
-
 export default function HomePage() {
   return (
-    <Layout theme="dark" className={styles.layout}>
-      <TalkBalloon>Hello World!</TalkBalloon>
-      <ProfileAvatar />
+    <>
+      <h1>About</h1>
 
-      {Object.entries(Profile).map(([label, data]) => (
-        <ProfileData label={label}>{data}</ProfileData>
+      {new Array(10).fill(0).map((_, i) => (
+        <p key={i}>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores
+          quidem autem itaque sint vitae laudantium hic quaerat quo tempore.
+          Perferendis debitis animi voluptatem aperiam cum temporibus nemo
+          blanditiis iure exercitationem?
+        </p>
       ))}
-
-      <ProfileData label="Find Me">
-        <IconLink href={Links.github} icon="GitHub" />
-        <IconLink href={Links.twitter} icon="Twitter" />
-        <IconLink href={Links.linkedIn} icon="LinkedIn" />
-      </ProfileData>
-    </Layout>
+    </>
   );
 }
-
-const Profile = {
-  name: 'Felipe Mendes',
-  level: `${getLevel()}`,
-  profession: 'Software Engineer',
-  location: 'Brazil',
-};
-
-const Links = {
-  github: 'https://github.com/zoruka',
-  twitter: 'https://twitter.com/_zoruka',
-  linkedIn: 'https://www.linkedin.com/in/felipejmendes',
-};

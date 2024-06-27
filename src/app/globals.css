@@ -1,12 +1,17 @@
 :root {
-	--dark: #323232;
-	--blue: #006aff;
-	--light: #fff;
-	--default-shadow: 0px 0 3px 1px #222;
+  --dark: #323232;
+  --blue: #006aff;
+  --light: #fff;
+  --default-shadow: 0px 0 3px 1px #222;
+
+  --space-pager-tab-height: 3rem;
+  --space-content-width: 720px;
+
+  --radii-md: 0.5rem;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1,
@@ -15,31 +20,31 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: normal;
-	color: var(--blue);
-	text-transform: uppercase;
+  font-weight: normal;
+  color: var(--blue);
+  text-transform: uppercase;
 }
 
 p {
-	font-family: monospace;
-	font-size: 1em;
-	line-height: 1.4em;
-	text-align: left;
-	padding: 0 15px;
-	text-align: center;
+  font-family: monospace;
+  font-size: 1em;
+  line-height: 1.4em;
+  text-align: left;
+  padding: 0 15px;
+  text-align: center;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Press Start 2P';
-	color: var(--light);
-	background-color: var(--dark);
-	text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P';
+  color: var(--light);
+  background-color: var(--dark);
+  text-align: center;
 
-	font-size: 16px;
+  font-size: 16px;
 
-	@media screen and (max-width: 768px) {
-		font-size: 12px;
-	}
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 }

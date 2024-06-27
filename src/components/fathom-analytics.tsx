@@ -28,14 +28,14 @@ const TrackPageView: React.FC<FathomAnalyticsProps> = ({
     Fathom.load(trackingCode, {
       includedDomains,
     });
-  }, [trackingCode, includedDomains]);
+  }, []);
 
   useEffect(() => {
     Fathom.trackPageview({
       url: pathname + searchParams.toString(),
       referrer: document.referrer,
     });
-  }, [pathname, searchParams, trackingCode, includedDomains]);
+  }, [pathname, searchParams]);
 
   return null;
 };

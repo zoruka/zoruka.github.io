@@ -12,3 +12,11 @@ export const getLevel = (): number => {
 export const cn = (...classes: (string | undefined)[]): string => {
   return classes.filter(Boolean).join(' ');
 };
+
+export const isSamePath = (base: string, fullPath: string): boolean => {
+  if (base === '/') {
+    return fullPath === '/';
+  }
+
+  return fullPath.startsWith(base);
+};

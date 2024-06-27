@@ -2,6 +2,8 @@ import { FathomAnalytics } from '@/components';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Press_Start_2P } from 'next/font/google';
+import { Pager } from '@/components/pager';
+import { ProfileFragment } from '@/fragments';
 
 const pressStart = Press_Start_2P({
   weight: '400',
@@ -20,9 +22,22 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <head>
+        <FathomAnalytics
+          trackingCode="LSKJWSLH"
+          includedDomains={['zoruka.xyz', 'www.zoruka.xyz']}
+        />
+      </head>
       <body className={pressStart.className}>
-        <FathomAnalytics trackingCode="LSKJWSLH" />
-        {children}
+        <ProfileFragment />
+        <Pager
+          tabs={[
+            { route: '/', label: 'About' },
+            { route: '/projects', label: 'Projects' },
+          ]}
+        >
+          {children}
+        </Pager>
       </body>
     </html>
   );
