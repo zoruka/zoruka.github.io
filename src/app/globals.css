@@ -2,7 +2,7 @@
   --dark: #323232;
   --blue: #006aff;
   --light: #fff;
-  --default-shadow: 0px 0 3px 1px #222;
+  --default-shadow: 0px 0px 3px 1px #222;
 
   --space-pager-tab-height: 2rem;
   --space-content-width: 720px;
@@ -12,6 +12,7 @@
 
 * {
   box-sizing: border-box;
+  text-shadow: 0px 0px 2px #888;
 }
 
 h1,
