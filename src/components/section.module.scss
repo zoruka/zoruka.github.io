@@ -1,11 +1,15 @@
 .container {
-  position: relative;
   overflow: visible;
   width: 100%;
-  padding: 15px;
+  gap: 1rem;
+  margin-bottom: 2rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  p {
+    padding: 0 1rem;
+  }
 }

@@ -10,7 +10,7 @@ export type SectionHeadingProps = React.HTMLAttributes<HTMLHeadingElement> &
 export const SectionHeading: React.FC<SectionHeadingProps> = ({
   children,
   className,
-  theme,
+  theme = 'light',
   ...props
 }) => {
   return (
