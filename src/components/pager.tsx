@@ -25,7 +25,6 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
 
   useEffect(() => {
     // Handle the initial state
-
     if (pathname !== '/') {
       setOpen(true);
     }
@@ -38,6 +37,8 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
 
     document.addEventListener('click', handleClickOutside);
 
+    contentWrapperRef.current?.scrollTo(0, 0);
+
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
@@ -45,11 +46,7 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
 
   useEffect(() => {
     // Handle the scroll behavior
-
     if (!contentWrapperRef.current) return;
-    setTimeout(() => {
-      contentWrapperRef.current?.scroll({ top: 0, behavior: 'smooth' });
-    }, 100);
 
     if (open) {
       contentWrapperRef.current.focus();
@@ -64,28 +61,30 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
       const handleTouchStart = (event: TouchEvent) => {
         pos.y = event.touches[0].clientY;
       };
-      const handleTouchMove = (event: TouchEvent) => {
+      const handleTouchEnd = (event: TouchEvent) => {
         if (!contentWrapperRef.current) return;
 
-        const touch = event.touches[0];
+        console.log(
+          contentWrapperRef.current.scrollTop,
+          pos.y,
+          event.changedTouches[0].clientY
+        );
 
         if (
-          touch.clientY - 10 > pos.y &&
+          event.changedTouches[0].clientY > pos.y &&
           contentWrapperRef.current.scrollTop <= 0
         ) {
           setOpen(false);
         }
-
-        pos.y = touch.clientY;
       };
 
       contentWrapperRef.current.addEventListener('wheel', handleWheel);
-      window.addEventListener('touchmove', handleTouchMove);
       window.addEventListener('touchstart', handleTouchStart);
+      window.addEventListener('touchend', handleTouchEnd);
       return () => {
         contentWrapperRef.current?.removeEventListener('wheel', handleWheel);
-        window.removeEventListener('touchmove', handleTouchMove);
         window.removeEventListener('touchstart', handleTouchStart);
+        window.removeEventListener('touchend', handleTouchEnd);
       };
     } else {
       const handleScroll = (event: WheelEvent) => {
@@ -95,24 +94,23 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
       };
 
       const pos = { y: 0 };
-      const handleTouchMove = (event: TouchEvent) => {
-        if (!contentWrapperRef.current) return;
-
-        const touch = event.touches[0];
-
-        if (touch.clientY < pos.y && window.scrollY >= 0) {
+      const handleTouchStart = (event: TouchEvent) => {
+        pos.y = event.touches[0].clientY;
+      };
+      const handleTouchEnd = (event: TouchEvent) => {
+        if (event.changedTouches[0].clientY < pos.y) {
           setOpen(true);
-          console.log('hit here');
         }
-
-        pos.y = touch.clientY;
       };
 
       window.addEventListener('wheel', handleScroll);
-      window.addEventListener('touchmove', handleTouchMove);
+      window.addEventListener('touchstart', handleTouchStart);
+      window.addEventListener('touchend', handleTouchEnd);
+
       return () => {
         window.removeEventListener('wheel', handleScroll);
-        window.removeEventListener('touchmove', handleTouchMove);
+        window.removeEventListener('touchstart', handleTouchStart);
+        window.removeEventListener('touchend', handleTouchEnd);
       };
     }
   }, [open, contentWrapperRef]);
