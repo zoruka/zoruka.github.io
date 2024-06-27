@@ -1,5 +1,3 @@
-'use client';
-
 import { VariantProps, cva } from 'class-variance-authority';
 import React from 'react';
 import styles from './layout.module.scss';
@@ -14,9 +12,9 @@ export const Layout: React.FC<LayoutProps> = ({
   ...props
 }) => {
   return (
-    <section className={containerVariants({ theme, className })} {...props}>
+    <main className={containerVariants({ theme, className })} {...props}>
       <div className={styles.content}>{children}</div>
-    </section>
+    </main>
   );
 };
 
