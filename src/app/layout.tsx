@@ -34,6 +34,7 @@ export default function RootLayout({
           tabs={[
             { route: '/', label: 'About' },
             { route: '/projects', label: 'Projects' },
+            { route: '/blog', label: 'Blog' },
           ]}
         >
           {children}
