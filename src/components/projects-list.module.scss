@@ -1,0 +1,52 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+
+  width: 100%;
+  max-width: 30rem;
+  margin: 1rem 0;
+}
+
+.image {
+  flex-shrink: 0;
+  height: 4rem;
+  width: 6rem;
+  border: 1px solid var(--dark);
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.heading {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin: 0rem 0px;
+  color: var(--dark);
+  text-wrap: wrap;
+
+  a {
+    color: var(--dark);
+  }
+}
+
+.role {
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.stack {
+  font-size: 0.8em;
+  font-family: monospace;
+  opacity: 0.5;
+}
+
+.description {
+  grid-column: span 2;
+  padding: 0;
+}
