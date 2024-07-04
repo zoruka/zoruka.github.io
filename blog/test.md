@@ -1,6 +1,6 @@
 ---
 title: Test Blog Post
-pubDate: 2024-07-04
+pubDate: 2024-07-05
 description: 'This is the first blog post test'
 image:
   url: 'https://docs.astro.build/assets/full-logo-light.png'
