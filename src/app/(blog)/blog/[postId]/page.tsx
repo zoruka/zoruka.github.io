@@ -1,6 +1,7 @@
 import { Blog } from '@/utils/blog';
 import { Metadata } from 'next';
 import styles from './page.module.scss';
+import Markdown from 'react-markdown';
 
 type BlogPageProps = {
   params: {
@@ -32,7 +33,7 @@ export default async function BlogPage({ params: { postId } }: BlogPageProps) {
   return (
     <div>
       <PostHeading metadata={metadata} />
-      <p>{content}</p>
+      <PostContent content={content} />
     </div>
   );
 }
@@ -54,4 +55,11 @@ const PostHeading: React.FC<PostHeadingProps> = ({ metadata }) => {
       </span>
     </div>
   );
+};
+
+type PostContentProps = {
+  content: string;
+};
+const PostContent: React.FC<PostContentProps> = ({ content }) => {
+  return <Markdown>{content}</Markdown>;
 };

@@ -2,3 +2,20 @@ body {
   color: var(--dark);
   background-color: var(--light);
 }
+
+p {
+  font-family: monospace;
+  font-size: 1em;
+  line-height: 1.4em;
+  text-align: left;
+  margin: 1em 0;
+  text-align: center;
+}
+
+pre {
+  background-color: #2222220f;
+  border-radius: var(--radii-md);
+  padding: 1em 2em;
+  text-align: left;
+  line-height: 1.5;
+}
