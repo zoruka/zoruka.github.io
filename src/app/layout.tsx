@@ -2,8 +2,6 @@ import { FathomAnalytics } from '@/components';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Press_Start_2P } from 'next/font/google';
-import { Pager } from '@/components/pager';
-import { ProfileFragment } from '@/fragments';
 
 const pressStart = Press_Start_2P({
   weight: '400',
@@ -28,18 +26,7 @@ export default function RootLayout({
           includedDomains={['zoruka.xyz', 'www.zoruka.xyz']}
         />
       </head>
-      <body className={pressStart.className}>
-        <ProfileFragment />
-        <Pager
-          tabs={[
-            { route: '/', label: 'About' },
-            { route: '/projects', label: 'Projects' },
-            { route: '/blog', label: 'Blog' },
-          ]}
-        >
-          {children}
-        </Pager>
-      </body>
+      <body className={pressStart.className}>{children}</body>
     </html>
   );
 }
