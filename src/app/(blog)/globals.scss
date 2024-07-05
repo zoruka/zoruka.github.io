@@ -2,27 +2,3 @@ body {
   color: var(--dark);
   background-color: var(--light);
 }
-
-h2 {
-  margin: 3rem 0 3rem 0;
-}
-
-p {
-  text-align: left;
-  margin: 2em 0;
-  font-size: 1.2em;
-}
-
-pre {
-  background-color: #2222220f;
-  border-radius: var(--radii-md);
-  padding: 1em 2em;
-  text-align: left;
-  line-height: 1.5;
-}
-
-a {
-  font-family: var(--font-sans);
-  font-weight: 500;
-  color: var(--dark);
-}

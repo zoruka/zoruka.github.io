@@ -1,5 +1,5 @@
+import './globals.scss';
 import { FathomAnalytics } from '@/components';
-import './globals.css';
 import type { Metadata } from 'next';
 import { Press_Start_2P, DM_Sans, DM_Mono } from 'next/font/google';
 import { cn } from '@/utils';

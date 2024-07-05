@@ -20,3 +20,12 @@ export const isSamePath = (base: string, fullPath: string): boolean => {
 
   return fullPath.startsWith(base);
 };
+
+export const formatDate = (date: string): string => {
+  return new Date(date).toLocaleDateString(undefined, {
+    year: 'numeric',
+    weekday: 'long',
+    month: 'long',
+    day: '2-digit',
+  });
+};

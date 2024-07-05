@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+
+  width: 100%;
+  max-width: 30rem;
+  margin: 1rem 0;
+}
+
+.heading {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin: 0rem 0px;
+  color: var(--dark);
+  text-wrap: wrap;
+  font-family: var(--font-press-start);
+
+  a {
+    color: var(--dark);
+  }
+}
+
+.description {
+  font-family: var(--font-sans);
+  padding: 0;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  opacity: 0.5;
+}

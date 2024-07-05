@@ -6,5 +6,5 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className={styles.container}>{children}</div>;
+  return <main className={styles.container}>{children}</main>;
 }

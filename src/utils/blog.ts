@@ -17,7 +17,11 @@ export const Blog = {
 
     const [_, metadata, content] = fileString.split('---');
 
-    return { metadata: YAML.parse(metadata), content: content.trim() };
+    return {
+      id,
+      metadata: YAML.parse(metadata),
+      content: content.trim(),
+    };
   },
   getPosts: async (): Promise<Blog.Post[]> => {
     const ids = await Blog.getIds();
@@ -29,6 +33,7 @@ export const Blog = {
 
 export namespace Blog {
   export type Post = {
+    id: string;
     content: string;
     metadata: PostMetadata;
   };

@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 import styles from './page.module.scss';
 import Markdown from 'react-markdown';
 import Link from 'next/link';
+import { routes } from '@/config/routes';
+import { formatDate } from '@/utils';
 
 type BlogPageProps = {
   params: {
@@ -45,18 +47,11 @@ type PostHeadingProps = {
 const PostHeading: React.FC<PostHeadingProps> = ({ metadata }) => {
   return (
     <div>
-      <Link href="/blog" className={styles.back}>
+      <Link href={routes.blog.list()} className={styles.back}>
         {'< '}Back
       </Link>
       <h1>{metadata.title}</h1>
-      <span className={styles.timestamp}>
-        {new Date(metadata.pubDate).toLocaleDateString(undefined, {
-          year: 'numeric',
-          weekday: 'long',
-          month: 'long',
-          day: '2-digit',
-        })}
-      </span>
+      <span className={styles.timestamp}>{formatDate(metadata.pubDate)}</span>
     </div>
   );
 };
@@ -65,5 +60,5 @@ type PostContentProps = {
   content: string;
 };
 const PostContent: React.FC<PostContentProps> = ({ content }) => {
-  return <Markdown>{content}</Markdown>;
+  return <Markdown className={styles.markdown}>{content}</Markdown>;
 };

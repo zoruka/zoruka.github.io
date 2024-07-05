@@ -1,4 +1,5 @@
 import { Pager } from '@/components';
+import { routes } from '@/config/routes';
 import { ProfileFragment } from '@/fragments';
 
 export default function LandingLayout({
@@ -11,9 +12,9 @@ export default function LandingLayout({
       <ProfileFragment />
       <Pager
         tabs={[
-          { route: '/', label: 'About' },
-          { route: '/projects', label: 'Projects' },
-          { route: '/blog', label: 'Blog' },
+          { route: routes.home(), label: 'About' },
+          { route: routes.projects(), label: 'Projects' },
+          { route: routes.blog.list(), label: 'Blog' },
         ]}
       >
         {children}

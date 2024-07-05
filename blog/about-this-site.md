@@ -1,6 +1,6 @@
 ---
 title: About This Site
-pubDate: 2024-07-05
+pubDate: 2024-07-06
 description: A brief description of zoruka.xyz page, the blog and its purpose.
 tags:
   [
