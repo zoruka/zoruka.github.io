@@ -27,10 +27,11 @@ h6 {
 }
 
 p {
-  font-family: monospace;
-  font-size: 1em;
-  line-height: 1.4em;
-  text-align: left;
+  font-family: var(--font-sans);
+  font-weight: 200;
+  letter-spacing: 0.03em;
+  line-height: 1.6em;
+
   margin: 0;
   text-align: center;
 }
@@ -38,7 +39,7 @@ p {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Press Start 2P';
+  font-family: var(--font-press-start);
   color: var(--light);
   background-color: var(--dark);
   text-align: center;
