@@ -37,7 +37,7 @@ export namespace Blog {
     title: string;
     description: string;
     pubDate: string;
-    image: {
+    image?: {
       url: string;
       alt: string;
     };
