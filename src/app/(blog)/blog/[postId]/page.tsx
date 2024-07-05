@@ -2,6 +2,7 @@ import { Blog } from '@/utils/blog';
 import { Metadata } from 'next';
 import styles from './page.module.scss';
 import Markdown from 'react-markdown';
+import Link from 'next/link';
 
 type BlogPageProps = {
   params: {
@@ -44,6 +45,9 @@ type PostHeadingProps = {
 const PostHeading: React.FC<PostHeadingProps> = ({ metadata }) => {
   return (
     <div>
+      <Link href="/blog" className={styles.back}>
+        {'< '}Back
+      </Link>
       <h1>{metadata.title}</h1>
       <span className={styles.timestamp}>
         {new Date(metadata.pubDate).toLocaleDateString(undefined, {

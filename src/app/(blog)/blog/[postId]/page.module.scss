@@ -3,3 +3,12 @@
   font-family: var(--font-mono);
   opacity: 0.5;
 }
+
+.back {
+  font-family: var(--font-press-start);
+  display: block;
+  text-align: left;
+  font-size: 0.6rem;
+  margin-bottom: 2rem;
+  color: var(--dark);
+}

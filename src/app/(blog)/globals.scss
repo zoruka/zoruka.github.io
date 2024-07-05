@@ -20,3 +20,9 @@ pre {
   text-align: left;
   line-height: 1.5;
 }
+
+a {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--dark);
+}
