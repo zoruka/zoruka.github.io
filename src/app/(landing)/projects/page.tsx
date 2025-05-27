@@ -42,6 +42,24 @@ export default function ProjectsPage() {
         <ProjectsList
           projects={[
             {
+              date: 'from 2025 to now',
+              description:
+                'Developing client facing features like analytics and users insights.',
+              role: 'Software Engineer',
+              url: 'https://dashboard.reown.com/',
+              title: 'Reown - Dashboard',
+              stack: ['Typescript', 'Next.js', 'Cloudflare', 'Supabase'],
+            },
+            {
+              date: 'from 2024 to 2025',
+              description: `Developed multi-chain adapters for Solana and Bitcoin over Reown's AppKit, a SDK that helps developers to build web3 apps through a seamless wallet integration.`,
+              role: 'Software Engineer',
+              url: 'https://demo.reown.com/',
+              repository: 'https://github.com/reown-com/appkit',
+              title: 'Reown - AppKit',
+              stack: ['Typescript', 'Web3', 'Ethereum', 'Solana', 'Bitcoin'],
+            },
+            {
               date: 'from 2023 to 2024',
               description:
                 'Led the re-architecture of the Fleek web application, a platform for decentralized site and storage hosting. I participated in defining the frontend and designing the product, ensuring alignment with a unique design system created by Fleek designers.',

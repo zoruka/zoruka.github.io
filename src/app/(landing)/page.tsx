@@ -24,6 +24,13 @@ export default function HomePage() {
         <JobsList
           jobs={[
             {
+              company: 'Reown',
+              title: 'Software Engineer',
+              subtitle: 'From: Jul/2024 - To: Now',
+              description: '',
+              link: 'https://reown.com',
+            },
+            {
               company: 'Fleek',
               title: 'Lead Frontend Engineer',
               subtitle: 'From: October/2021 - To: May/2024',
