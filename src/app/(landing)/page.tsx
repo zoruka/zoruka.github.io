@@ -59,13 +59,6 @@ export default function HomePage() {
         <JobsList
           jobs={[
             {
-              company: 'USP/Esalq',
-              title: 'Lead Frontend Engineer',
-              subtitle: 'From: 2023 - To: 2025 (in progress)',
-              description: '',
-              link: 'https://www.linkedin.com/school/mbauspesalq/',
-            },
-            {
               company: 'Inatel',
               title: 'BSc in Computer Engineering',
               subtitle: 'From: 2017 - To: 2021',
