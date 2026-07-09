@@ -17,7 +17,7 @@ export type ProjectsListProps = {
 export const ProjectsList: React.FC<ProjectsListProps> = ({ projects }) => {
   return projects.map(
     ({ title, description, role, date, stack, url, repository }) => (
-      <div className={styles.container}>
+      <div className={styles.container} key={`${url}-${date}`}>
         <div className={styles.data}>
           <h2 className={styles.heading}>
             <a href={url} target="_blank">

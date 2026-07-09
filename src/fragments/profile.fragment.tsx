@@ -15,13 +15,15 @@ export const ProfileFragment = () => {
       <ProfileAvatar />
 
       {Object.entries(Profile).map(([label, data]) => (
-        <ProfileData label={label}>{data}</ProfileData>
+        <ProfileData label={label} key={label}>
+          {data}
+        </ProfileData>
       ))}
 
       <ProfileData label="Find Me">
-        <IconLink href={Links.github} icon="GitHub" />
-        <IconLink href={Links.twitter} icon="Twitter" />
-        <IconLink href={Links.linkedIn} icon="LinkedIn" />
+        <IconLink href={Links.github} icon="GitHub" key="github" />
+        <IconLink href={Links.twitter} icon="Twitter" key="twitter" />
+        <IconLink href={Links.linkedIn} icon="LinkedIn" key="linkedin" />
       </ProfileData>
     </Layout>
   );

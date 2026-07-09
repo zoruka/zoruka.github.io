@@ -14,7 +14,7 @@ export type JobsListProps = {
 
 export const JobsList: React.FC<JobsListProps> = ({ jobs }) => {
   return jobs.map(({ title, subtitle, description, link, company }) => (
-    <div className={styles.container}>
+    <div className={styles.container} key={`${company}-${subtitle}`}>
       <div className={styles.header}>
         <h2 className={styles.heading}>
           {title}&nbsp;-&nbsp;

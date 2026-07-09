@@ -10,7 +10,7 @@ export type BlogPostsListProps = {
 
 export const BlogPostsList: React.FC<BlogPostsListProps> = ({ posts }) => {
   return posts.map(({ id, metadata: { title, description, pubDate } }) => (
-    <div className={styles.container}>
+    <div className={styles.container} key={id}>
       <Link href={routes.blog.post(id)}>
         <h2 className={styles.heading}>{`${title} >`}</h2>
       </Link>

@@ -21,7 +21,7 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
   const pagerRef = useRef<HTMLDivElement>(null);
   const contentWrapperRef = useRef<HTMLDivElement>(null);
 
-  const pathname = usePathname();
+  const pathname = usePathname() ?? '';
 
   useEffect(() => {
     // Handle the initial state

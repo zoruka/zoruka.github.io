@@ -6,7 +6,7 @@ import { Layout } from '../components/layout';
 import Link from 'next/link';
 import styles from './not-found.module.scss';
 
-const NotFoundPage = (): JSX.Element => {
+const NotFoundPage = (): React.JSX.Element => {
   return (
     <Layout theme="dark">
       <SectionHeading theme="dark">😢 Game Over 😢</SectionHeading>

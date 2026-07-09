@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('vinext').NextConfig} */
 const nextConfig = {
 	output: 'export',
 	compiler: {
@@ -6,4 +6,4 @@ const nextConfig = {
 	},
 };
 
-module.exports = nextConfig;
+export default nextConfig;
