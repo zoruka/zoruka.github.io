@@ -24,11 +24,11 @@ export default function HomePage() {
         <JobsList
           jobs={[
             {
-              company: 'Reown',
-              title: 'Software Engineer',
+              company: 'WalletConnect',
+              title: 'Senior Software Engineer',
               subtitle: 'From: Jul/2024 - To: Now',
               description: '',
-              link: 'https://reown.com',
+              link: 'https://walletconnect.com/',
             },
             {
               company: 'Fleek',
