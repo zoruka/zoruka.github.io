@@ -1,0 +1,1 @@
+var e=(...e)=>e.filter(Boolean).join(` `),t=(e,t)=>e===`/`?t===`/`:t.startsWith(e);export{t as n,e as t};
