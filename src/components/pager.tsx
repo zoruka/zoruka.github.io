@@ -3,9 +3,8 @@
 import { VariantProps, cva } from 'class-variance-authority';
 import styles from './pager.module.scss';
 import React, { useEffect, useRef, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { isSamePath } from '@/utils';
-import Link from 'next/link';
 
 type TabParams = {
   route: string;
@@ -22,6 +21,7 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
   const contentWrapperRef = useRef<HTMLDivElement>(null);
 
   const pathname = usePathname() ?? '';
+  const router = useRouter();
 
   const resetContentScroll = () => {
     contentWrapperRef.current?.scrollTo(0, 0);
@@ -120,17 +120,32 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
     }
   }, [open, contentWrapperRef]);
 
-  const handleTabSwitch = (route: string) => {
+  const handleTabSwitch = (
+    route: string,
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    ) {
+      return;
+    }
+
     if (isSamePath(route, pathname)) {
+      event.preventDefault();
       setOpen((o) => !o);
       return;
     }
 
+    event.preventDefault();
     resetContentScroll();
+    setOpen(true);
 
-    if (!open) {
-      setOpen(true);
-    }
+    router.push(route, { scroll: false });
   };
 
   return (
@@ -167,23 +182,25 @@ const pagerVariants = cva(styles.container, {
 type TabProps = React.PropsWithChildren<{
   route: string;
   active?: boolean;
-  onTabSwitch: (route: string) => void;
+  onTabSwitch: (
+    route: string,
+    event: React.MouseEvent<HTMLAnchorElement>
+  ) => void;
 }>;
 
 const Tab: React.FC<TabProps> = ({ children, route, active, onTabSwitch }) => {
-  const handleClick = () => {
-    onTabSwitch(route);
+  const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    onTabSwitch(route, event);
   };
 
   return (
-    <Link
+    <a
       href={route}
-      scroll={false}
       className={tabVariants({ active })}
       onClick={handleClick}
     >
       {children}
-    </Link>
+    </a>
   );
 };
 
