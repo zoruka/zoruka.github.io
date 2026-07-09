@@ -1,5 +1,4 @@
 import './globals.scss';
-import { FathomAnalytics } from '@/components';
 import type { Metadata } from 'next';
 import { Press_Start_2P, DM_Sans, DM_Mono } from 'next/font/google';
 import { cn } from '@/utils';
@@ -34,12 +33,6 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <head>
-        <FathomAnalytics
-          trackingCode="LSKJWSLH"
-          includedDomains={['zoruka.xyz', 'www.zoruka.xyz']}
-        />
-      </head>
       <body
         className={cn(pressStart.variable, dmSans.variable, dmMono.variable)}
       >
