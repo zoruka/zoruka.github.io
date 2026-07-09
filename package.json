@@ -4,6 +4,7 @@
   "description": "Zoruka's web page.",
   "version": "0.1.0",
   "author": "Felipe Mendes <zo.fmendes@gmail.com>",
+  "packageManager": "yarn@1.22.22",
   "dependencies": {
     "class-variance-authority": "^0.7.0",
     "fathom-client": "^3.7.0",
