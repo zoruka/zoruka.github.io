@@ -16,12 +16,11 @@ export type PagerProps = React.HTMLAttributes<HTMLDivElement> & {
 };
 
 export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
-  const [open, setOpen] = useState(false);
-  const pagerRef = useRef<HTMLDivElement>(null);
-  const contentWrapperRef = useRef<HTMLDivElement>(null);
-
   const pathname = usePathname() ?? '';
   const router = useRouter();
+  const [open, setOpen] = useState(() => pathname !== '/');
+  const pagerRef = useRef<HTMLDivElement>(null);
+  const contentWrapperRef = useRef<HTMLDivElement>(null);
 
   const resetContentScroll = () => {
     contentWrapperRef.current?.scrollTo(0, 0);
