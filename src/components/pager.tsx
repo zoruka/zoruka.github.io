@@ -3,7 +3,7 @@
 import { VariantProps, cva } from 'class-variance-authority';
 import styles from './pager.module.scss';
 import React, { useEffect, useRef, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { isSamePath } from '@/utils';
 import Link from 'next/link';
 
@@ -23,6 +23,10 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
 
   const pathname = usePathname() ?? '';
 
+  const resetContentScroll = () => {
+    contentWrapperRef.current?.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     // Handle the initial state
     if (pathname !== '/') {
@@ -37,7 +41,8 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
 
     document.addEventListener('click', handleClickOutside);
 
-    contentWrapperRef.current?.scrollTo(0, 0);
+    resetContentScroll();
+    requestAnimationFrame(resetContentScroll);
 
     return () => {
       document.removeEventListener('click', handleClickOutside);
@@ -121,6 +126,8 @@ export const Pager: React.FC<PagerProps> = ({ children, tabs }) => {
       return;
     }
 
+    resetContentScroll();
+
     if (!open) {
       setOpen(true);
     }
@@ -171,6 +178,7 @@ const Tab: React.FC<TabProps> = ({ children, route, active, onTabSwitch }) => {
   return (
     <Link
       href={route}
+      scroll={false}
       className={tabVariants({ active })}
       onClick={handleClick}
     >
