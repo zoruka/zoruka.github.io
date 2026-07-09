@@ -1,0 +1,8 @@
+/*.rsc
+  Content-Type: text/x-component; charset=utf-8
+
+/blog/*.rsc
+  Content-Type: text/x-component; charset=utf-8
+
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
